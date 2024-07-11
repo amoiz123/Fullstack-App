@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Styles the outer container of the entire app */
+.app {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Sets height to 100% of the viewport height */
+  background-color: #05f8f8ad;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styles the container for the form inputs */
+.TextBox {
+  background-color: #f0f0f0; /* Sets background color */
+  padding: 40px; /* Adds padding inside the box */
+  border-radius: 100px; /* Rounds corners of the box */
+  box-shadow: 100 100 100px rgba(187, 17, 17, 0.1); /* Adds a subtle shadow */
+  width: 400px; /* Sets width of the box */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Styles the form element inside .TextBox */
+.TextBox form {
+  display: flex; /* Uses flexbox for form layout */
+  flex-direction: column; /* Arranges form elements vertically */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Styles the labels inside the form */
+.TextBox label {
+  margin-bottom: 10px; /* Adds space below each label */
 }
 
-.App-link {
-  color: #61dafb;
+/* Styles text and file input fields */
+.TextBox input[type="text"],
+.TextBox input[type="file"] {
+  width: calc(100% - 20px); /* Makes input fields almost full-width */
+  padding: 8px; /* Adds padding inside input fields */
+  margin-top: 5px; /* Adds space above input fields */
+  border: 1px solid #ccc; /* Adds a light gray border */
+  border-radius: 4px; /* Rounds corners of input fields */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styles the submit button */
+.TextBox button {
+  margin-top: 10px; /* Adds space above the button */
+  padding: 10px 20px; /* Adds padding inside the button */
+  background-color: #007bff; /* Sets background color */
+  color: white; /* Sets text color */
+  border: none; /* Removes default button border */
+  border-radius: 4px; /* Rounds corners of the button */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Styles the submit button on hover */
+.TextBox button:hover {
+  background-color: #0056b3; /* Darkens background color */
 }
